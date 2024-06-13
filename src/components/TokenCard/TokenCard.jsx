@@ -1,19 +1,19 @@
 import React from 'react'
 import * as images from "../../assets"
 import Button from '../Button/Button'
-const TokenCard = ({fundAmount, maxAllocation, token, title, desc, img, ethlogo, fund, max, btn}) => {
+const TokenCard = ({ fundAmount, maxAllocation, token, title, desc, img, ethlogo, fund, max, btn }) => {
     return (
-        <div className='lg:w-[30%] md:w-[40%] rounded-full border_gradient z-[-10]'>
-            <div className='py-2 bg-[#1b1b1b] '>
+        <div className='lg:w-[30%] md:w-[40%] border_gradient rounded-[20px]'>
+            <div className='py-2 bg-[#1b1b1b] rounded-t-[20px] border_gradient_b'>
                 <h1 className='text-center uppercase'>
                     {token}
                 </h1>
             </div>
             <div className='relative'>
-                <img src={images[img]} alt="" className='w-full object-cover ' />
+                <img src={images[img]} alt="" className='w-full object-cover border_gradient2' />
                 <img src={images[ethlogo]} alt="" className='absolute bottom-[-16%] left-5 w-20' />
             </div>
-            <div className='bg-[#2c2d2f] pt-14 pb-6 px-6 flex flex-col gap-3'>
+            <div className='bg-[#2c2d2f] pt-14 pb-6 px-6 flex flex-col gap-3 rounded-b-[20px]'>
                 <h1 className='text-xl'>{title}</h1>
                 <p className='text-gray-400'>{desc}</p>
                 <div className='flex justify-between items-center'>

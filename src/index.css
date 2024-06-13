@@ -57,8 +57,9 @@ body {
     transform: translateX(0);
   }
 }
-.border_gradient {
-  border: 1px solid;
+/* .border_gradient {
+  border-width: 1px;
+  border-style: solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(
     90deg,
@@ -66,5 +67,24 @@ body {
     rgba(134, 66, 177, 1) 53%,
     rgba(255, 104, 164, 1) 100%
   );
-  border-radius: 50%;
+} */
+.border_gradient {
+  background: linear-gradient(
+      90deg,
+      rgba(11, 188, 156, 1) 0%,
+      rgba(134, 66, 177, 1) 53%,
+      rgba(255, 104, 164, 1) 100%
+    )
+    border-box;
+  border: 1px solid transparent;
+}
+.border_gradient2 {
+  background: linear-gradient(
+      90deg,
+      rgba(11, 188, 156, 1) 0%,
+      rgba(134, 66, 177, 1) 53%,
+      rgba(255, 104, 164, 1) 100%
+    )
+    border-box;
+  border-top: 1px solid transparent;
 }

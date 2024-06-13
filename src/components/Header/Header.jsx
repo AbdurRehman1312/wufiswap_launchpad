@@ -53,8 +53,8 @@ const Header = () => {
                         />
                     </div>
                     {toggle && (
-                        <div className="lg:hidden absolute top-[13.5vh] md:top-[14vh] right-0 w-full px-4">
-                            <div className="p-6 bg-gray-600 shadow-2xl z-[100] mx-4 my-2 rounded-xl sidebar">
+                        <div className="lg:hidden absolute top-[13.5vh] md:top-[14vh] right-0 w-full px-1 z-[100]">
+                            <div className="p-6 bg-gray-600 shadow-2xl mx-4 my-2 rounded-xl sidebar">
                                 <ul className=' items-center gap-5 flex flex-col justify-center'>
                                     {
                                         links.map((link, index) => (
