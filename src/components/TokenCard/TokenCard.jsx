@@ -3,7 +3,7 @@ import * as images from "../../assets"
 import Button from '../Button/Button'
 const TokenCard = ({fundAmount, maxAllocation, token, title, desc, img, ethlogo, fund, max, btn}) => {
     return (
-        <div className='lg:w-[25%] md:w-[40%] rounded-full border_gradient z-[-10]'>
+        <div className='lg:w-[30%] md:w-[40%] rounded-full border_gradient z-[-10]'>
             <div className='py-2 bg-[#1b1b1b] '>
                 <h1 className='text-center uppercase'>
                     {token}

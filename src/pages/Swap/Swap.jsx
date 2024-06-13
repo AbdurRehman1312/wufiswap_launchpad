@@ -45,9 +45,9 @@ const tokenlist = [
 const Swap = () => {
     return (
         <>
-            <section className='px-5 my-5'>
-                <h1 className='text-2xl lg:px-[85px] md:px-[60px]'>Upcoming Launches</h1>
-                <div className='flex flex-col md:flex-row flex-wrap items-center lg:gap-24 md:gap-5 gap-10 justify-center my-10'>
+            <section className='px-5 lg:px-[93px] my-5'>
+                <h1 className='text-2xl'>Upcoming Launches</h1>
+                <div className='flex flex-col md:flex-row flex-wrap items-center lg:gap-16 md:gap-5 gap-10 justify-center my-10'>
                     {
                         tokenlist.map((token, index) => (
                             <TokenCard
