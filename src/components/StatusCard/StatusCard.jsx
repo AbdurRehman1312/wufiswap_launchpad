@@ -5,7 +5,7 @@ const StatusCard = () => {
     let status = true
   return (
     <>
-     <div className='bg_table px-8 py-10'>
+     <div className='bg_table px-8 py-10 lg:w-[50%] rounded-[20px]'>
           <div className='flex justify-between '>
             <h1 className='text-2xl '>Status</h1>
             {status ? <div className='flex items-center gap-2'><img src={images.close} alt="" className='w-5 h-6' /><span className='text-xl'>non registered</span></div>: <div className='flex items-center gap-2'><img src={images.tick} alt="" className='w-5' /><span className='text-xl'>registered</span></div>}
