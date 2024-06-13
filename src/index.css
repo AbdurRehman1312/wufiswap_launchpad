@@ -88,3 +88,14 @@ body {
     border-box;
   border-top: 1px solid transparent;
 }
+.bg_table{
+  background: rgb(51,53,55);
+  backdrop-filter:blur (10px);
+}
+.table_border{
+  border: 1px solid linear-gradient(
+     rgba(11, 188, 156, 1) 0%,
+    rgba(134, 66, 177, 1) 53%,
+    rgba(255, 104, 164, 1) 100%
+  );
+}
