@@ -6,11 +6,11 @@ import Button from '../Button/Button'
 const links = [
     {
         name: 'Swap',
-        to: '/about'
+        to: '/'
     },
     {
         name: 'Farm',
-        to: '/'
+        to: '/farm'
     },
     {
         name: 'Launchpad',
