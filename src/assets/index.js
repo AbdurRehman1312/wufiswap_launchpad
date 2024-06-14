@@ -6,3 +6,4 @@ export { default as tick } from "./tick.png";
 export { default as dots } from "./dots.png";
 export { default as ethimg } from "./ethimg.png";
 export { default as ethlogo } from "./ethlogo.png";
+export { default as astrodog } from "./astrodog.png";

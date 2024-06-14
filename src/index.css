@@ -90,10 +90,72 @@ body {
 .bg_table{
   background: #37383a;
 }
+.bg_sales{
+  background: #5a5d60;
+}
 .table_border{
   border: 1px solid linear-gradient(
      rgba(11, 188, 156, 1) 0%,
     rgba(134, 66, 177, 1) 53%,
     rgba(255, 104, 164, 1) 100%
   );
+}
+.timeline {
+  position: relative;
+  width: 80%;
+  height: 5px;
+  border-radius: 5px;
+  margin: 40px auto; /* Ensure there's space for labels */
+}
+
+.node {
+  position: absolute;
+  bottom: -16px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.label {
+  position: absolute;
+  width: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  top: 30px;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .node {
+      width: 15px;
+      height: 15px;
+  }
+
+  .label {
+      width: 100px;
+      font-size: 0.65rem;
+  }
+}
+.toc-container {
+  height: calc(100vh - 40px); /* Adjust if needed based on header/footer height */
+  overflow-y: auto; /* Allows scrolling within the navigation if needed */
+}
+
+/* Sticky positioning for tablets and larger screens */
+@media (min-width: 768px) {
+  .toc-container {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 20px; /* Adjust based on your header or desired offset from the top */
+  }
+}
+/* Relative positioning for mobile screens */
+@media (max-width: 767px) {
+  .toc-container {
+      position: relative;
+      top: 0;
+  }
 }
