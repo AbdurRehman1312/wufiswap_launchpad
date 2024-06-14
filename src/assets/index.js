@@ -7,3 +7,6 @@ export { default as dots } from "./dots.png";
 export { default as ethimg } from "./ethimg.png";
 export { default as ethlogo } from "./ethlogo.png";
 export { default as astrodog } from "./astrodog.png";
+export { default as dogecoin } from "./dogecoin.png";
+export { default as usdt } from "./usdt.png";
+export { default as downArrow } from "./downArrow.png";
