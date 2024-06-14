@@ -59,7 +59,7 @@ const Header = () => {
                                     {
                                         links.map((link, index) => (
                                             <li key={index} className='inline-block mx-4'>
-                                                <Link to={link.to}>{link.name}</Link>
+                                                <Link to={link.to} onClick={() => setToggle(false)}>{link.name}</Link>
                                             </li>
                                         ))
                                     }

@@ -78,8 +78,7 @@ body {
   border: 1px solid transparent;
 } */
 .border_gradient {
-  border: 1px solid transparent; 
-  border-radius: 20px !important;
+  border: 1px solid transparent;
   padding: 1px;
   /* border-radius: 20px; */
   background: linear-gradient(

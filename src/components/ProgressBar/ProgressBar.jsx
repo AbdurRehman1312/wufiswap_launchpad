@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const ProgressBar = () => {
-  const [activePhase, setActivePhase] = useState(1);
+const ProgressBar = ({activePhase, setActivePhase}) => {
+ 
+
   function getNodeGradient() {
     return 'conic-gradient(rgba(11, 188, 156, 1) 0%, rgba(134, 66, 177, 1) 55%, rgba(255, 104, 164, 1) 100%)';
-}
+  }
 
-  
   const milestones = [
     { phase: "Registration", date: "06/14/24", position: 20 },
     { phase: "Sale phase 1: WUFI Holders", date: "06/20/24", position: 40 },
@@ -14,27 +14,33 @@ const ProgressBar = () => {
     { phase: "Distribution", date: "06/30/24", position: 80 }
   ];
 
-  const gradientStops = [
-    { stop: "rgba(255,82,151,1)" },
-    { stop: "rgba(131,19,203,1)" },
-    { stop: "rgba(0,255,209,1)" }
-  ];
+
 
   const getGradient = () => {
-    if (activePhase >= milestones.length) {
-      return `linear-gradient(90deg, ${gradientStops.map(s => s.stop).join(", ")})`;
-    }
-    let percentages = milestones.map(m => m.position);
-    let colorStops = [...gradientStops.map((g, idx) => `${g.stop} ${idx ? percentages[activePhase - 1] : 0}%`)];
-    colorStops.push(`grey ${percentages[activePhase]}%`);
+    // This will get the position for the active phase
+    const activePosition = milestones[activePhase - 1].position;
+  
+    // Define the gradient stops based on the active position
+    const colorStops = [
+      `rgba(255, 82, 151, 1) 0%`,
+      `rgba(131, 19, 203, 1) ${Math.min(55, activePosition * 55 / 100)}%`,
+      `rgba(0, 255, 209, 1) ${Math.min(100, activePosition)}%`,
+      `grey ${activePosition}% 100%`
+    ];
+  
+    // Return the CSS for the gradient
     return `linear-gradient(90deg, ${colorStops.join(", ")})`;
   };
+  
 
   return (
-    <div className="timeline" style={{ background: getGradient(), backgroundColor:"gray" }}>
+    <div className="timeline" style={{ background: getGradient(), }}>
       {milestones.map((milestone, index) => (
-        <span className="node" style={{ left: `${milestone.position}%`, background: index <= activePhase ? getNodeGradient() : 'grey' }} key={index} onClick={() => setActivePhase(index + 1)}>
-          <div className="label text-sm">{milestone.phase}<br/>{milestone.date}</div>
+        <span className="node" style={{
+          left: `${milestone.position}%`,
+          background: index < activePhase ? getNodeGradient() : 'grey'
+        }} key={index}>
+          <div className="label text-sm" >{milestone.phase}<br />{milestone.date}</div>
         </span>
       ))}
     </div>

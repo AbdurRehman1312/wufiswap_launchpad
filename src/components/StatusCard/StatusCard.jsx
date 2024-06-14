@@ -1,7 +1,7 @@
 import React from 'react'
 import * as images from "../../assets"
 import Button from '../Button/Button'
-const StatusCard = () => {
+const StatusCard = ({ toggleCard, setActivePhase }) => {
   let status = true
   return (
     <>
@@ -19,7 +19,10 @@ const StatusCard = () => {
             {status ? <h1 className='text-lg text-gray-400 font-light'>Stake $WUFI to be eligible</h1> : <h1 className='text-lg text-gray-400 font-light'>Stake more $WUFI to increase your allocation</h1>}
           </div>
           <div className='flex justify-center mt-5'>
-            <Button name={"Stake $WUFI"} style={"px-16"} />
+            <Button name={"Stake $WUFI"} style={"px-16"} onClick={() => {
+              toggleCard();
+              setActivePhase(2); // Example of advancing phase on action
+            }} />
           </div>
         </div>
       </div>

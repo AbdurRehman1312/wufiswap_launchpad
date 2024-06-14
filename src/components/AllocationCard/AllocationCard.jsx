@@ -4,8 +4,8 @@ import Button from '../Button/Button'
 const AllocationCard = () => {
   return (
     <>
-     <div className='bg_table px-8 h-[255px] md:h-[223px] lg:h-[255px]  rounded-[20px] flex justify-center items-center'>
-      <div className='w-full'>
+     <div className=' border_gradient p-3 w-full rounded-[20px] flex justify-center items-center'>
+      <div className='w-full bg_table rounded-[20px] px-8 py-28'>
            
           <div className='flex flex-col items-center gap-5 mt-5'>
             <h1 className='text-2xl '>Your $MUTT allocation</h1>

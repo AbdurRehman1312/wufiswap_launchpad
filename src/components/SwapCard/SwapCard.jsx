@@ -11,7 +11,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-const SwapCard = () => {
+const SwapCard = ({ toggleCard, setActivePhase }) => {
     const [coins, setCoins] = useState([
         { id: 'dogecoin', name: 'Doge', image: images.dogecoin },
         { id: 'usdt', name: 'USDT', image: images.usdt },
@@ -34,14 +34,14 @@ const SwapCard = () => {
     }
 
     return (
-        <div className='bg_table px-8 py-8  rounded-[20px] flex justify-center items-center'>
-            <div className='w-full'>
+        <div className='border_gradient rounded-[20px] flex justify-center items-center'>
+            <div className='w-full bg_table px-8 py-8 rounded-[20px]'>
                 {/* From Section */}
                 <div className='bg_sales w-full flex justify-between items-end py-5 px-5 rounded-[20px] shadow-xl'>
                     <div className='flex flex-col items-start gap-1'>
                         <h1 className='text-base text-gray-400 '>From</h1>
                         <input type="number"
-                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none" value={0} />
+                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none" placeholder='0' />
 
                     </div>
                     <Select value={selectedOption1} onValueChange={setSelectedOption1}>
@@ -65,7 +65,7 @@ const SwapCard = () => {
 
                 {/* Swap Button */}
                 <div className='flex justify-center py-5'>
-                    <button onClick={swapCoins}><img src={images.downArrow} alt="Swap" className='w-4 h-3'/></button>
+                    <button onClick={swapCoins}><img src={images.downArrow} alt="Swap" className='w-4 h-3' /></button>
                 </div>
 
                 {/* To Section */}
@@ -73,7 +73,7 @@ const SwapCard = () => {
                     <div className='flex flex-col items-start gap-1'>
                         <h1 className='text-base text-gray-400 '>To</h1>
                         <input type="number"
-                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none" value={0} />
+                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none" placeholder='0' />
 
                     </div>
                     <Select value={selectedOption2} onValueChange={setSelectedOption2}>
@@ -100,9 +100,12 @@ const SwapCard = () => {
                     <div className='bg_sales w-[45%] text-center p-3 rounded-xl shadow-xl'>
                         <h1 className='text-base text-white '>Max allocation: 0.1 DOGE</h1>
                     </div>
-                    <Button name={"Connect wallet"} style={" w-[45%] justify-center"} />
+                    <Button name={"Connect wallet"} style={" w-[45%] justify-center"} onClick={() => {
+                        toggleCard();
+                        setActivePhase((prev) => prev + 2); // Example of advancing phase on action
+                    }} />
                 </div>
-                
+
             </div>
         </div>
     )

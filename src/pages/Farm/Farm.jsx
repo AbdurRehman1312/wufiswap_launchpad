@@ -7,15 +7,26 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import React from 'react'
+import React, {useState} from 'react'
 import * as images from "../../assets"
 import StatusCard from "@/components/StatusCard/StatusCard"
 import ProgressBar from "@/components/ProgressBar/ProgressBar"
 import AllocationCard from "@/components/AllocationCard/AllocationCard"
 import Description from "@/components/Description/Description"
+import SwapCard from "@/components/SwapCard/SwapCard"
 
 const Farm = () => {
+  const [showStatusCard, setShowStatusCard] = useState(false);
+  const [showSwapCard, setShowSwapCard] = useState(true);
+  const [activePhase, setActivePhase] = useState(1);
 
+  const toggleStatusCard = () => {
+    setShowStatusCard(!showStatusCard);
+  };
+
+  const toggleSwapCard = () => {
+    setShowSwapCard(!showSwapCard);
+  };
   return (
     <>
       <div className="px-5 lg:px-[93px] pt-5">
@@ -29,7 +40,7 @@ const Farm = () => {
             </TableRow>
           </TableHeader>
           <TableBody >
-            <TableRow className= "bg-[#36373a]">
+            <TableRow className="bg-[#36373a]">
               <TableCell className="font-medium rounded-s-[20px] "><div className="flex flex-col sm:flex-row sm:items-center  sm:gap-6 gap-3">
                 <img src={images.ethlogo} alt="" className="w-24 h-24" />
                 <div>
@@ -50,17 +61,20 @@ const Farm = () => {
             <img src={images.ethimg} alt="" className=" w-full rounded-[20px]" />
           </div>
           <div className="lg:w-[50%] w-full">
-            <StatusCard />
+          {showStatusCard ? 
+              (showSwapCard ? <SwapCard toggleCard={toggleSwapCard} setActivePhase={setActivePhase} /> : <AllocationCard />)
+              : <StatusCard toggleCard={toggleStatusCard} setActivePhase={setActivePhase} />
+            }
           </div>
         </div>
         <div className="pt-10">
           <h1 className="text-xl">Status overview</h1>
-        <ProgressBar  />
+          <ProgressBar activePhase={activePhase} setActivePhase={setActivePhase}/>
         </div>
         <div className="pt-20">
           <Description />
         </div>
-        
+
       </div>
 
     </>

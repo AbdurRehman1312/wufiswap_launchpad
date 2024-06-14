@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import TokenCard from '../../components/TokenCard/TokenCard'
 import FundedProjects from '@/components/FundedProjects/FundedProjects'
-import TableFund from '@/components/TableFund/TableFund'
 
 
 const tokenlist = [
@@ -60,7 +59,6 @@ const Swap = () => {
                     }
                 </div>
                 <FundedProjects />
-                {/* <TableFund /> */}
             </section>
         </>
     )
