@@ -36,12 +36,12 @@ const ProgressBar = ({activePhase, setActivePhase}) => {
   return (
     <div className="timeline" style={{ background: getGradient(), }}>
       {milestones.map((milestone, index) => (
-        <span className="node" style={{
+        <div className="node" style={{
           left: `${milestone.position}%`,
           background: index < activePhase ? getNodeGradient() : 'grey'
         }} key={index}>
-          <div className="label text-sm" >{milestone.phase}<br />{milestone.date}</div>
-        </span>
+          <span className="label text-sm" >{milestone.phase}<br />{milestone.date}</span>
+        </div>
       ))}
     </div>
   );
