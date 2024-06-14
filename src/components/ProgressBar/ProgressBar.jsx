@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 
 const ProgressBar = () => {
-  const [activePhase, setActivePhase] = useState(0);
+  const [activePhase, setActivePhase] = useState(1);
+  function getNodeGradient() {
+    return 'conic-gradient(rgba(11, 188, 156, 1) 0%, rgba(134, 66, 177, 1) 55%, rgba(255, 104, 164, 1) 100%)';
+}
+
+  
   const milestones = [
-    { phase: "Registration", date: "06/14/24", position: 10 },
-    { phase: "Sale phase 1: WUFI Holders", date: "06/20/24", position: 30 },
+    { phase: "Registration", date: "06/14/24", position: 20 },
+    { phase: "Sale phase 1: WUFI Holders", date: "06/20/24", position: 40 },
     { phase: "Sale phase 2: FCFS", date: "06/21/24", position: 60 },
-    { phase: "Distribution", date: "06/30/24", position: 90 }
+    { phase: "Distribution", date: "06/30/24", position: 80 }
   ];
 
   const gradientStops = [
@@ -21,14 +26,14 @@ const ProgressBar = () => {
     }
     let percentages = milestones.map(m => m.position);
     let colorStops = [...gradientStops.map((g, idx) => `${g.stop} ${idx ? percentages[activePhase - 1] : 0}%`)];
-    colorStops.push(`rgba(0, 0, 0, 0.2) ${percentages[activePhase]}%`);
+    colorStops.push(`grey ${percentages[activePhase]}%`);
     return `linear-gradient(90deg, ${colorStops.join(", ")})`;
   };
 
   return (
-    <div className="timeline" style={{ background: getGradient() }}>
+    <div className="timeline" style={{ background: getGradient(), backgroundColor:"gray" }}>
       {milestones.map((milestone, index) => (
-        <span className="node" style={{ left: `${milestone.position}%`, background: index <= activePhase ? 'inherit' : 'grey' }} key={index} onClick={() => setActivePhase(index + 1)}>
+        <span className="node" style={{ left: `${milestone.position}%`, background: index <= activePhase ? getNodeGradient() : 'grey' }} key={index} onClick={() => setActivePhase(index + 1)}>
           <div className="label text-sm">{milestone.phase}<br/>{milestone.date}</div>
         </span>
       ))}

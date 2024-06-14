@@ -29,7 +29,7 @@ const Farm = () => {
             </TableRow>
           </TableHeader>
           <TableBody >
-            <TableRow >
+            <TableRow className= "bg-[#36373a]">
               <TableCell className="font-medium rounded-s-[20px] "><div className="flex flex-col sm:flex-row sm:items-center  sm:gap-6 gap-3">
                 <img src={images.ethlogo} alt="" className="w-24 h-24" />
                 <div>
@@ -45,9 +45,9 @@ const Farm = () => {
             </TableRow>
           </TableBody>
         </Table>
-        <div className="pt-12 flex justify-between items-center flex-col md:flex-row gap-5 ">
-          <div className="rounded-lg lg:w-[50%]">
-            <img src={images.ethimg} alt="" className="lg:w-[80%] w-full rounded-[20px]" />
+        <div className="pt-12 flex justify-between flex-col md:flex-row gap-5 ">
+          <div className="rounded-[20px] border_gradient lg:w-[50%]">
+            <img src={images.ethimg} alt="" className=" w-full rounded-[20px]" />
           </div>
           <div className="lg:w-[50%] w-full">
             <StatusCard />

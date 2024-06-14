@@ -24,7 +24,7 @@ const Description = () => {
     return (
         <div className="py-5 px-lg-5 px-md-5 px-sm-0">
             <Row>
-                <Col xs={24} sm={24} md={8} lg={4} className="toc-container px-3 my-3 h-32">
+                <Col xs={24} sm={24} md={8} lg={4} className="toc-container px-3 my-3">
                 <h1 className="text-xl pb-5">Description</h1>
                     <Link activeClass="active" to="section1" spy={true} smooth={true} duration={50}>
                         Overview
@@ -84,7 +84,7 @@ const Description = () => {
                     </ul>
                     </Element>
                 </Col>
-                <Col xs={24} sm={24} md={16} lg={9} className="img-container px-3 my-3">
+                <Col xs={24} sm={24} md={24} lg={9} className="img-container px-3 my-3">
                     <div className="">
                         <h1 className="text-xl pb-10">Sales Design</h1>
                         <SalesDesign />
