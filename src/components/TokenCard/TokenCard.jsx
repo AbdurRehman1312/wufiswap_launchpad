@@ -11,7 +11,7 @@ const TokenCard = ({ fundAmount, maxAllocation, token, title, desc, img, ethlogo
             </div>
             <div className='relative'>
                 <img src={images[img]} alt="" className='w-full object-cover border_gradient2' />
-                <img src={images[ethlogo]} alt="" className='absolute bottom-[-16%] left-5 w-20' />
+                <img src={images[ethlogo]} alt="" className='absolute bottom-[-16%] left-5 w-20 border_gradient rounded-[10px] ' />
             </div>
             <div className='bg-[#2c2d2f] pt-14 pb-6 px-6 flex flex-col gap-3 rounded-b-[20px]'>
                 <h1 className='text-xl'>{title}</h1>

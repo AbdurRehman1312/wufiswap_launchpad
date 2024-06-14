@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import TokenCard from '../../components/TokenCard/TokenCard'
 import FundedProjects from '@/components/FundedProjects/FundedProjects'
+import TableFund from '@/components/TableFund/TableFund'
 
 
 const tokenlist = [
@@ -48,7 +49,7 @@ const Swap = () => {
         <>
             <section className='px-5 lg:px-[93px] my-5'>
                 <h1 className='text-2xl'>Upcoming Launches</h1>
-                <div className='flex flex-col md:flex-row flex-wrap items-center lg:gap-16 md:gap-5 gap-10 justify-center my-10'>
+                <div className='flex flex-col md:flex-row flex-wrap justify-between md:justify-center lg:justify-between items-center md:gap-5 gap-10 my-10'>
                     {
                         tokenlist.map((token, index) => (
                             <TokenCard
@@ -59,6 +60,7 @@ const Swap = () => {
                     }
                 </div>
                 <FundedProjects />
+                {/* <TableFund /> */}
             </section>
         </>
     )
