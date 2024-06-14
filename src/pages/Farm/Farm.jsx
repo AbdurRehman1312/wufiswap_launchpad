@@ -41,11 +41,11 @@ const Farm = () => {
           </TableHeader>
           <TableBody >
             <TableRow className="bg-[#36373a]">
-              <TableCell className="font-medium rounded-s-[20px] "><div className="flex flex-col sm:flex-row sm:items-center  sm:gap-6 gap-3">
+              <TableCell className="font-medium rounded-s-[20px] "><div className="flex flex-col lg:flex-row lg:items-center  lg:gap-6 gap-3">
                 <img src={images.ethlogo} alt="" className="w-24 h-24" />
                 <div>
                   <h1 className="text-2xl">Ethereum</h1>
-                  <p className="text-gray-500 text-base mt-1">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet lorem ipsum </p>
+                  <p className="text-gray-500 text-base mt-1">Lorem ipsum dolor sin amet lorem <br/> ipsum dolor sin amet lorem ipsum </p>
                 </div>
               </div></TableCell>
               <TableCell className="text-lg text-center text-nowrap">
@@ -56,7 +56,7 @@ const Farm = () => {
             </TableRow>
           </TableBody>
         </Table>
-        <div className="pt-12 flex justify-between flex-col md:flex-row gap-5 ">
+        <div className="pt-12 flex justify-between items-start flex-col md:flex-row gap-5 ">
           <div className="rounded-[20px] border_gradient lg:w-[50%]">
             <img src={images.ethimg} alt="" className=" w-full rounded-[20px]" />
           </div>

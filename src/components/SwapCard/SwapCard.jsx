@@ -34,25 +34,25 @@ const SwapCard = ({ toggleCard, setActivePhase }) => {
     }
 
     return (
-        <div className='border_gradient rounded-[20px] flex justify-center items-center'>
-            <div className='w-full bg_table px-8 py-8 rounded-[20px]'>
+        <div className='border_gradient rounded-[20px] '>
+            <div className=' bg_table px-8 py-5 rounded-[20px]'>
                 {/* From Section */}
-                <div className='bg_sales w-full flex justify-between items-end py-5 px-5 rounded-[20px] shadow-xl'>
+                <div className='bg_sales  flex justify-between items-end py-5 px-5 rounded-[20px] shadow-xl'>
                     <div className='flex flex-col items-start gap-1'>
                         <h1 className='text-base text-gray-400 '>From</h1>
                         <input type="number"
-                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none" placeholder='0' />
+                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none w-[50%]" placeholder='0' />
 
                     </div>
                     <Select value={selectedOption1} onValueChange={setSelectedOption1}>
-                        <SelectTrigger className="w-[100px]">
+                        <SelectTrigger className=" w-[130px] sm:w-[100px] ">
                             <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup>
                                 {coins.map(coin => (
                                     <SelectItem key={coin.id} value={coin.id}>
-                                        <div className="flex items-center text-base gap-2">
+                                        <div className="flex items-center text-xs sm:text-base gap-2">
                                             <img src={coin.image} alt={coin.name} className="w-5 h-5" />
                                             <span>{coin.name}</span>
                                         </div>
@@ -69,22 +69,22 @@ const SwapCard = ({ toggleCard, setActivePhase }) => {
                 </div>
 
                 {/* To Section */}
-                <div className='bg_sales w-full flex justify-between items-end py-5 px-5 rounded-[20px] shadow-xl'>
+                <div className='bg_sales  flex justify-between items-end py-5 px-5 rounded-[20px] shadow-xl'>
                     <div className='flex flex-col items-start gap-1'>
                         <h1 className='text-base text-gray-400 '>To</h1>
                         <input type="number"
-                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none" placeholder='0' />
+                            className=" bg_sales text-xl appearance-none border-0 focus:outline-none w-[50%]" placeholder='0' />
 
                     </div>
                     <Select value={selectedOption2} onValueChange={setSelectedOption2}>
-                        <SelectTrigger className="w-[100px]">
+                        <SelectTrigger className="w-[130px] sm:w-[100px]">
                             <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup>
                                 {coins.map(coin => (
                                     <SelectItem key={coin.id} value={coin.id}>
-                                        <div className="flex items-center text-base gap-2">
+                                        <div className="flex items-center text-xs sm:text-base gap-2">
                                             <img src={coin.image} alt={coin.name} className="w-5 h-5" />
                                             <span>{coin.name}</span>
                                         </div>
@@ -96,11 +96,11 @@ const SwapCard = ({ toggleCard, setActivePhase }) => {
                 </div>
 
                 {/* Footer */}
-                <div className='pt-7 flex justify-between'>
-                    <div className='bg_sales w-[45%] text-center p-3 rounded-xl shadow-xl'>
-                        <h1 className='text-base text-white '>Max allocation: 0.1 DOGE</h1>
+                <div className='pt-7 flex flex-col lg:flex-row gap-3 lg:gap-0 justify-between'>
+                    <div className='bg_sales w-full lg:w-[53%] text-center p-3 rounded-xl shadow-xl'>
+                        <h1 className='text-sm xl:text-base  text-white text-nowrap'>Max allocation: 0.1 DOGE</h1>
                     </div>
-                    <Button name={"Connect wallet"} style={" w-[45%] justify-center"} onClick={() => {
+                    <Button name={"Connect wallet"} style={" w-full lg:w-[45%] justify-center "} onClick={() => {
                         toggleCard();
                         setActivePhase((prev) => prev + 2); // Example of advancing phase on action
                     }} />
