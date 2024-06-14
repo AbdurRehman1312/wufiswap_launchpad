@@ -181,3 +181,19 @@ body {
       height: calc(100vh - 45vh);
   }
 }
+
+table {
+  border-collapse:separate; 
+  border-spacing: 0 1em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
