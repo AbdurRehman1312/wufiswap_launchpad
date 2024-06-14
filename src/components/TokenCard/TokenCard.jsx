@@ -1,6 +1,8 @@
 import React from 'react'
 import * as images from "../../assets"
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
+
 const TokenCard = ({ fundAmount, maxAllocation, token, title, desc, img, ethlogo, fund, max, btn }) => {
     return (
         <div className='lg:w-[30%] md:w-[40%] border_gradient rounded-[20px]'>
@@ -24,7 +26,9 @@ const TokenCard = ({ fundAmount, maxAllocation, token, title, desc, img, ethlogo
                     <h1>{maxAllocation}</h1>
                     <p>{max}</p>
                 </div>
-                <Button name={btn} style={"flex justify-center text-center px-1 w-[70%] mx-auto mt-5"} />
+                <Link to='/farm'>
+                    <Button name={btn} style={"flex justify-center text-center px-1 w-[70%] mx-auto mt-5"} />
+                </Link>
             </div>
         </div>
     )
