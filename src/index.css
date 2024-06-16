@@ -197,3 +197,12 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.active{
+  color: white !important;
+}
+.active::before{
+  content: ">";
+  color: white !important;
+  transform: scaleX(1);
+  transition: all 0.3s ease-in-out 0s;
+}

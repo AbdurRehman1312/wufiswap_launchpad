@@ -33,24 +33,24 @@ const tableHead = [{
 }]
 const projects = [
     {
-        name: 'Ethereum',
-        type: 'Token Sale',
-        participants: 125,
-        rasied: '$80,000',
-        price: '$0.2568',
-        img: images.ethlogo,
-        ath: "+654%",
-        launch: 'May 15th 2024',
+        name: 'Laika',
+        type: 'TOKEN SALE',
+        participants: 680,
+        rasied: '$220,000',
+        price: 'NA',
+        img: images.laika,
+        ath: "NA",
+        launch: 'Apr 25th 2024',
     },
     {
-        name: 'Laika',
-        type: 'Token Sale',
-        participants: 125,
-        rasied: '$80,000',
-        price: '$0.2568',
-        img: images.ethlogo,
-        ath: "+654%",
-        launch: 'May 15th 2024',
+        name: 'WIWW',
+        type: 'TOKEN SALE',
+        participants: 320,
+        rasied: '$130,000',
+        price: '+100%',
+        img: images.www,
+        ath: "+15,000%",
+        launch: 'Feb 6th 2024',
     },
 ]
 const FundedProjects = () => {
@@ -60,7 +60,7 @@ const FundedProjects = () => {
             <Table>
                 <TableHeader>
                     <TableRow>
-                       {
+                        {
                             tableHead.map((head) => (
                                 <TableHead
                                     key={head.name} className="text-nowrap"
@@ -68,7 +68,7 @@ const FundedProjects = () => {
                                     {head.name}
                                 </TableHead>
                             ))
-                       }
+                        }
                     </TableRow>
                 </TableHeader>
                 <TableBody className="">
@@ -84,8 +84,8 @@ const FundedProjects = () => {
                                 <TableCell>{project.type}</TableCell>
                                 <TableCell>{project.participants}</TableCell>
                                 <TableCell>{project.rasied}</TableCell>
-                                <TableCell>{project.price}</TableCell>
-                                <TableCell className="text-green-500">{project.ath}</TableCell>
+                                <TableCell className={project.price === 'NA' ? '' : 'text-green-500'}>{project.price}</TableCell>
+                                <TableCell className={project.ath === 'NA' ? '' : 'text-green-500'}>{project.ath}</TableCell>
                                 <TableCell className="rounded-r-[20px]">{project.launch}</TableCell>
                             </TableRow>
                         ))
