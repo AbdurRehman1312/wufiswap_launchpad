@@ -23,8 +23,8 @@ const Description = () => {
 
     return (
         <div className="py-5 px-lg-5 px-md-5 px-sm-0">
-            <Row>
-                <Col xs={24} sm={24} md={8} lg={4} className="toc-container px-3 my-3">
+            <Row className='flex-col-reverse md:flex-row'>
+                <Col xs={24} sm={24} md={8} lg={4} className="toc-container px-3 my-3 md:block hidden">
                     <h1 className="text-xl pb-5">Description</h1>
                     <div className='flex flex-col'>
                         <Link activeClass="active" to="section1" spy={true} smooth={true} duration={50} className='text-gray-400 hover:text-white'>
@@ -52,31 +52,10 @@ const Description = () => {
                     <Element name="section1" className="element ">
                         <h1 className="text-xl pb-5"> Overview</h1>
                         <p className="text-gray-400">TBA</p>
-                        {/* <ul className='pl-4 list-disc'>
-                            <li className='text-base text-[#A1A1A1]'>$COOKIE, powered by the Cookie DAO, is the utility token within the Cookie3 ecosystem.</li>
-                            <br />
-                            <li className='text-base text-[#A1A1A1]'>Cookie3 is the first MarketingFi protocol capturing the $650B digital marketing value.</li>
-                            <br />
-                            <li className='text-base text-[#A1A1A1]'>The Cookie3 Analytics platform has been live for 10+ months, is used by 170+ dapps, and is already generating revenue.</li>
-                            <br />
-                            <li className='text-base text-[#A1A1A1]'>Over 600M wallets processed.</li>
-                            <br />
-                            <li className='text-base text-[#A1A1A1]'>Cookie3 is a multichain solution on 16 chains, including Ethereum, Polygon, Arbitrum, Avax, BNB Chain, and Base.</li>
-                            <br />
-                            <li className='text-base text-[#A1A1A1]'>12,5% of $COOKIE at TGE, 1 month cliff</li>
-                            <br />
-                            <li className='text-base text-[#A1A1A1]'>$COOKIE price is set at $0.028.</li>
-                        </ul> */}
                     </Element>
                     <Element name="section2" className="element mt-10">
                         <h1 className="text-xl pb-5"> Key features</h1>
                         <p className="text-gray-400">TBA</p>
-                        {/* <ul className='pl-4 list-disc'>
-                            <li className='text-base text-[#A1A1A1]'>$COOKIE, powered by the Cookie DAO, is the utility token within the Cookie3 ecosystem.</li>
-                            <br />
-                            <li className='text-base text-[#A1A1A1]'>Cookie3 is the first MarketingFi protocol capturing the $650B digital marketing value.</li>
-
-                        </ul> */}
                     </Element>
                     <Element name="section3" className="element mt-10">
                         <h1 className="text-xl pb-5"> Token utility</h1>

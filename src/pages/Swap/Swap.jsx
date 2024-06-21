@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import TokenCard from '../../components/TokenCard/TokenCard'
 import FundedProjects from '@/components/FundedProjects/FundedProjects'
 
@@ -17,30 +16,6 @@ const tokenlist = [
         title: "Mutt",
         desc: "The first memecoin of the Laika system.The first space puppy. ",
     },
-    // {
-    //     token: "Private Sale",
-    //     img: "mutt",
-    //     muttlogo: "muttlogo",
-    //     fund: "Funding Goal",
-    //     fundAmount: "$350,000",
-    //     maxAllocation: "Max Allocation",
-    //     max: "TBA",
-    //     btn: "Starts on 07.10",
-    //     title: "Mutt",
-    //     desc: "The first memecoin of the Laika system.The first space puppy. ",
-    // },
-    // {
-    //     token: "Private Sale",
-    //     img: "mutt",
-    //     muttlogo: "muttlogo",
-    //     fund: "Funding Goal",
-    //     fundAmount: "$350,000",
-    //     maxAllocation: "Max Allocation",
-    //     max: "TBA",
-    //     btn: "Starts on 07.20",
-    //     title: "Mutt",
-    //     desc: "The first memecoin of the Laika system.The first space puppy. ",
-    // },
 
 ]
 const Swap = () => {

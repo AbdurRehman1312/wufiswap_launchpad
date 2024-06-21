@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const ProgressBar = ({activePhase, setActivePhase}) => {
- 
+const ProgressBarMobile = ({ activePhase }) => {
+  const isMobile = window.innerWidth <= 600; // This checks if the screen width is 600px or less
 
   function getNodeGradient() {
     return 'conic-gradient(rgba(11, 188, 156, 1) 0%, rgba(134, 66, 177, 1) 55%, rgba(255, 104, 164, 1) 100%)';
@@ -14,37 +14,34 @@ const ProgressBar = ({activePhase, setActivePhase}) => {
     { phase: "Distribution", date: "06/30/24", position: 80 }
   ];
 
-
-
   const getGradient = () => {
-    // This will get the position for the active phase
     const activePosition = milestones[activePhase - 1].position;
-  
-    // Define the gradient stops based on the active position
     const colorStops = [
       `rgba(255, 82, 151, 1) 0%`,
       `rgba(131, 19, 203, 1) ${Math.min(55, activePosition * 55 / 100)}%`,
       `rgba(0, 255, 209, 1) ${Math.min(100, activePosition)}%`,
       `grey ${activePosition}% 100%`
     ];
-  
-    // Return the CSS for the gradient
-    return `linear-gradient(90deg, ${colorStops.join(", ")})`;
+    return `linear-gradient(${isMobile ? 'to bottom' : 'to right'}, ${colorStops.join(", ")})`;
+  };
+  const formatClassName = (phaseName) => {
+    const className = `labelMobile-${phaseName.toLowerCase().replace(/[\s:]/g, '-')}`;
+    console.log(className); // Log the generated class name
+    return className;
   };
   
-
   return (
-    <div className="timeline hidden md:block" style={{ background: getGradient(), }}>
+    <div className="timelineMobile block md:hidden" style={{ background: getGradient() }}>
       {milestones.map((milestone, index) => (
-        <div className="node" style={{
-          left: `${milestone.position}%`,
+        <div className="nodeMobile" style={{
+          [isMobile ? 'top' : 'left']: `${milestone.position}%`,
           background: index < activePhase ? getNodeGradient() : 'grey'
         }} key={index}>
-          <span className="label text-sm" >{milestone.phase}<br />{milestone.date}</span>
+           <span className={`${formatClassName(milestone.phase)} labelMobile`} >{milestone.phase}<br />{milestone.date}</span>
         </div>
       ))}
     </div>
   );
 };
 
-export default ProgressBar;
+export default ProgressBarMobile;

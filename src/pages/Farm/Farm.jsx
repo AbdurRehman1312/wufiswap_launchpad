@@ -14,6 +14,7 @@ import ProgressBar from "@/components/ProgressBar/ProgressBar"
 import AllocationCard from "@/components/AllocationCard/AllocationCard"
 import Description from "@/components/Description/Description"
 import SwapCard from "@/components/SwapCard/SwapCard"
+import ProgressBarMobile from "@/components/ProgressBarMobile/ProgressBarMobile"
 
 const Farm = () => {
   const [showStatusCard, setShowStatusCard] = useState(false);
@@ -69,7 +70,7 @@ const Farm = () => {
             <div className="rounded-[20px] border_gradient flex flex-col gap-2">
               <img src={images.muttman} alt="" className=" w-full rounded-[20px]" />
             </div>
-            <div className="flex items-center gap-5 mt-3 mx-3">
+            <div className="flex justify-center items-center gap-5 mt-3 mx-3">
               <a href="https://x.com/mutt_laika" target="_blank" >
                 <img src={images.x} alt="" className="w-5" />
               </a>
@@ -90,14 +91,15 @@ const Farm = () => {
         </div>
         <div className="pt-10">
           <h1 className="text-xl">Status overview</h1>
+          {/* This is the ProgressBar component for only medium and large screen */}
           <ProgressBar activePhase={activePhase} setActivePhase={setActivePhase} />
+          {/* This is the ProgressBar component for only small screen (mobile) */}
+          <ProgressBarMobile activePhase={activePhase} setActivePhase={setActivePhase} />
         </div>
-        <div className="pt-20">
+        <div className="md:pt-20 pt-0">
           <Description />
         </div>
-
       </div>
-
     </>
   )
 }
