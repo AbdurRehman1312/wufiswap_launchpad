@@ -26,7 +26,6 @@ const ProgressBarMobile = ({ activePhase }) => {
   };
   const formatClassName = (phaseName) => {
     const className = `labelMobile-${phaseName.toLowerCase().replace(/[\s:]/g, '-')}`;
-    console.log(className); // Log the generated class name
     return className;
   };
   
