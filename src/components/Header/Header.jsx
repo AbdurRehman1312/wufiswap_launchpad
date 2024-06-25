@@ -14,7 +14,7 @@ const links = [
     },
     {
         name: 'Launchpad',
-        to: '/'
+        to: '/launchpad'
     }
 
 ]
