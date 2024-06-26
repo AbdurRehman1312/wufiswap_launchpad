@@ -35,10 +35,10 @@ const CollapseComponent = ({coinName}) => {
                         <div>
                             <h1 className='text-base lg:text-xl'><span className='text-[#e1479a]'>PEPE</span> EARNED</h1>
                         </div>
-                        <div className='flex items-center gap-10 w-full'>
+                        <div className='flex items-center gap-4 lg:gap-5 xl:gap-10 w-full'>
                             <input
                                 type="number"
-                                className="bg-[#5a5d60] text-base lg:text-xl appearance-none border-0 focus:outline-none w-[100%] py-2 px-5 rounded-[30px]"
+                                className="bg-[#5a5d60] text-base lg:text-xl appearance-none border-0 focus:outline-none  py-2 px-5 rounded-[30px]"
                                 placeholder='0 USD'
                                 value={inputValue}
                                 onChange={handleInputChange}
