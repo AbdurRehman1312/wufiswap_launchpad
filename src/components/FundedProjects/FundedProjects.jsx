@@ -59,7 +59,7 @@ const FundedProjects = () => {
             <h1 className='text-2xl'>Funded Projects</h1>
             <Table>
                 <TableHeader>
-                    <TableRow>
+                    <TableRow className="bg-transparent">
                         {
                             tableHead.map((head) => (
                                 <TableHead

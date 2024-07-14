@@ -7,7 +7,7 @@ const Farm = () => {
 
   return (
     <>
-    <TabsComponent />
+      <TabsComponent />
     </>
   )
 }

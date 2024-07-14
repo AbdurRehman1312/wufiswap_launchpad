@@ -26,3 +26,4 @@ export { default as arrowDown } from "./arrow-down.png";
 export { default as usdc } from "./usdc.png";
 export { default as window } from "./window.png";
 export { default as eye } from "./eye.png";
+export { default as laikacoins1 } from "./laikacoins1.png";

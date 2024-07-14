@@ -34,7 +34,7 @@ const Launchpad = () => {
         <div className="md:block hidden">
           <Table>
             <TableHeader>
-              <TableRow>
+              <TableRow className="bg-transparent">
                 <TableHead className="w-[80vh]">Project</TableHead>
                 <TableHead className="text-center text-nowrap">Funding goal</TableHead>
                 <TableHead className="text-center text-nowrap">Max allocation</TableHead>

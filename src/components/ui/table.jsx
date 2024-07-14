@@ -37,7 +37,7 @@ const TableRow = React.forwardRef(({ className, ...props }, ref) => (
   <tr
       ref={ref}
       className={cn(
-          "",
+          "bg-[#36373A]",
           className
       )}
       {...props} />
@@ -59,7 +59,7 @@ TableHead.displayName = "TableHead"
 const TableCell = React.forwardRef(({ className, ...props }, ref) => (
   <td
     ref={ref}
-    className={cn("py-7 px-5 align-middle font-semibold text-nowrap bg-[#36373A] ", className)}
+    className={cn("py-7 px-5 align-middle font-semibold text-nowrap ", className)}
     {...props} />
 ))
 TableCell.displayName = "TableCell"

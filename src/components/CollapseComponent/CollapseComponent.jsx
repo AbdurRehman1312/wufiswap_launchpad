@@ -1,76 +1,77 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { TableCell, TableRow } from "@/components/ui/table";
 import * as images from "../../assets"
 import Button from '../Button/Button'
-const CollapseComponent = ({coinName}) => {
-    const [inputValue, setInputValue] = useState('');
-    const [showPopup, setShowPopup] = useState(false);
+const CollapseComponent = ({ coinName }) => {
+  const [inputValue, setInputValue] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-    };
-    const renderPopup = () => {
-        setShowPopup(true)
-      }
-      function closePopup() {
-        setShowPopup(false);
-        document.body.classList.remove("popup-open");
-      }
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+  const renderPopup = () => {
+    setShowPopup(true)
+  }
+  function closePopup() {
+    setShowPopup(false);
+    document.body.classList.remove("popup-open");
+  }
 
-      const handlePopupClick = (e) => {
-        e.stopPropagation();
-    };
-   return (
-      <>
-        <TableRow className="bg-[#36373a] w-full ">
-            <TableCell colSpan={2} className="rounded-s-[20px] ">
-                <div className='text-base lg:text-xl flex flex-col items-center gap-4'>
-                    <button className='text-[#27c05e] tracking-wider'>Add {coinName}</button>
-                    <a href="" className='flex items-start text-[#27c05e] gap-2 tracking-wider'><span>See Pair Info</span><img src={images.window} alt="" className='w-6' /></a>
-                    <button className='flex items-center text-[#27c05e] gap-2 tracking-wider'><span>View Contract</span><img src={images.eye} alt="" className='w-7' /></button>
-                </div>
-            </TableCell>
-            <TableCell colSpan={2} className="">
-                    <div className='border rounded-[20px] py-16 px-7 flex flex-col items-start gap-4'>
-                        <div>
-                            <h1 className='text-base lg:text-xl'><span className='text-[#e1479a]'>PEPE</span> EARNED</h1>
-                        </div>
-                        <div className='flex items-center gap-4 lg:gap-5 xl:gap-10 w-full'>
-                            <input
-                                type="number"
-                                className="bg-[#5a5d60] text-base lg:text-xl appearance-none border-0 focus:outline-none  py-2 px-5 rounded-[30px]"
-                                placeholder='0 USD'
-                                value={inputValue}
-                                onChange={handleInputChange}
-                            />
-                            <Button
-                                name={"Harvest"}
-                                style={"py-3 justify-center"}
-                                onClick={() => console.log('Button clicked')}
-                                disabled={!inputValue}  // Button will be disabled if inputValue is empty
-                            />
-                        </div>
-                    </div>
-                </TableCell>
-            <TableCell colSpan={5} className="rounded-e-[20px] ">
-            <div className='border rounded-[20px] py-10 px-7 flex flex-col items-center gap-4'>
+  const handlePopupClick = (e) => {
+    e.stopPropagation();
+  };
+  return (
+    <>
+      <TableRow className="bg-[#36373a] w-full ">
+        <TableCell colSpan={2} className="rounded-s-[20px] ">
+          <div className='text-base lg:text-xl flex flex-col items-start gap-4 lg:ps-10'>
+            <h1>Links</h1>
+            <a href="" className='flex items-center text-gray-400 gap-2 tracking-wider'>
+              <span> {">"} Get LAIKA LP</span>
+              <img src={images.window} alt="" className='w-4' />
+            </a>
+            <a href="" className='flex items-center text-gray-400 gap-2 tracking-wider'>
+              <span> {">"} See token contract</span>
+              <img src={images.window} alt="" className='w-4' />
+            </a>
+            <button className='flex items-center text-gray-400 gap-2 tracking-wider'>
+              <span> {">"} View Contract</span>
+              <img src={images.window} alt="" className='w-4' />
+            </button>
+          </div>
+        </TableCell>
+        <TableCell colSpan={2} className="">
+          <div className='px-7'>
+            <div className='flex justify-between'>
+              <div className='flex flex-col items-center'>
+                <h1 className='text-base lg:text-xl'>Your position</h1>
+                <span className='text-gray-400 text-sm lg:text-lg'>0 LAIKA LP</span>
+              </div>
+              <div className='flex flex-col items-center'>
+                <h1 className='text-base lg:text-xl'>LAIKA earned</h1>
+                <span className='text-gray-400 text-sm lg:text-lg'>0 LAIKA</span>
+              </div>
+            </div>
+            <Button name={"Unstake"} style={" py-3 justify-center mx-auto px-10 mt-12"} onClick={renderPopup} />
+          </div>
+        </TableCell>
+        <TableCell colSpan={5} className="rounded-e-[20px] ">
+          <div className='py-10 px-7 flex flex-col items-start gap-4'>
             <div>
-            <h1 className='text-base lg:text-xl'>Enter Amount</h1>
-            <input type="number" className=" bg-[#5a5d60] text-base lg:text-xl appearance-none border-0 focus:outline-none w-[100%] py-2 px-5 mt-3 rounded-[30px]" placeholder='0 LP' />
+              <h1 className='text-base lg:text-xl'>Enter amount (max : 0 LAIKA LP)</h1>
+              <input type="number" className=" bg-[#5a5d60] text-base lg:text-xl appearance-none border-0 focus:outline-none w-[100%] py-2 px-5 mt-3 rounded-[10px]" placeholder='0' />
             </div>
-            <Button name={"Stake Amount"} style={" py-3 justify-center "} onClick={renderPopup}/>
-             
-            </div>
-            </TableCell>
-          </TableRow>
-
-          {showPopup && (
+            <Button name={"Connect Wallet"} style={" py-3 justify-center "} onClick={renderPopup} />
+          </div>
+        </TableCell>
+      </TableRow>
+      {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center  z-[100]" onClick={closePopup}>
           <div className="bg-[#191919] py-6 px-7 z-[300] md:w-[40%] rounded-[20px]" onClick={handlePopupClick}>
             <div className="flex flex-col items-center gap-5">
 
-            <h2 className="text-white font-bold text-2xl">Waiting for TX</h2>
-        
+              <h2 className="text-white font-bold text-2xl">Waiting for TX</h2>
+
 
               <div role="status">
                 <svg aria-hidden="true" class="w-10 h-10 text-gray-200 animate-spin dark:text-gray-600 fill-[#e1479a]" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,8 +85,8 @@ const CollapseComponent = ({coinName}) => {
           </div>
         </div>
       )}
-      </>
-    );
+    </>
+  );
 }
 
 export default CollapseComponent
