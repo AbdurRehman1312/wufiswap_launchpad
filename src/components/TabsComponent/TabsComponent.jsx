@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import TableComponent from '../TableComponent/TableComponent'
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import {
@@ -23,7 +17,7 @@ const TabsComponent = () => {
     const [activeTab, setActiveTab] = useState("live");
     return (
         <>
-            <div className='py-10 md:px-10 px-4'>
+            <div className=''>
                 <h1 className='text-2xl mb-10'>Farm</h1>
                 <Tabs defaultValue="live" onValueChange={(value) => setActiveTab(value)} className="">
                     <div className='flex items-center flex-wrap md:flex-nowrap justify-between gap-6 md:gap-5'>

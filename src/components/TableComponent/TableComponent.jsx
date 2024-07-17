@@ -36,7 +36,7 @@ const TableComponent = () => {
   return (
     <div className="w-full">
       <div className="rounded-md ">
-        <Table >
+        <Table className="border-separate border-spacing-y-[2em]">
           <TableHeader>
             <TableRow className="bg-transparent">
               <TableHead className="text-center text-base lg:text-lg">Pool</TableHead>
@@ -53,29 +53,29 @@ const TableComponent = () => {
                 <Collapsible key={link.id} asChild>
                   <>
                     <CollapsibleTrigger className='' asChild>
-                      <TableRow className="cursor-pointer">
-                        <TableCell className="font-medium text-base lg:text-lg rounded-s-[20px] ">
+                      <TableRow className="cursor-pointer br_gradient">
+                        <TableCell className="font-medium text-base lg:text-lg rounded-s-[20px]">
                           <div className='flex items-center justify-center gap-3'>
-                            <div className='w-[35 px] h-[35px]'>
+                            <div className='w-[40px] h-[40px]'>
                               <img src={link.image} alt="" className='w-full h-[100%] object-cover' />
                             </div>
-                            <span>{link.swap_coin}</span>
+                            <span className='text-base lg:text-lg'>{link.swap_coin}</span>
                           </div>
                         </TableCell>
                         <TableCell className="text-center">
-                          <span className=' text-lg lg:text-xl font-light'>{link.earned} LAIKA</span>
+                          <span className=' text-lg lg:text-lg font-medium'>{link.earned} LAIKA</span>
                         </TableCell>
                         <TableCell className="text-center">
-                          <p className='text-[#27c05e] text-base lg:text-lg'>Up to {link.apr_orignal}</p>
+                          <p className='text-[#27c05e] text-base lg:text-lg font-semibold'>Up to {link.apr_orignal}</p>
                         </TableCell>
                         <TableCell className="text-center">
-                          <span className='text-base lg:text-lg ml-2 xl:ml-0 tracking-wider'>{link.staked_liquidity} LAIKA LP</span>
+                          <span className='text-base lg:text-lg ml-2 xl:ml-0 tracking-wider font-bold'>{link.staked_liquidity} LAIKA LP</span>
                         </TableCell>
                         <TableCell className="text-center">
-                          <span className='text-lg lg:text-xl font-light'>{link.available} LAIKA LP</span>
+                          <span className='text-lg lg:text-lg font-medium'>{link.available} LAIKA LP</span>
                         </TableCell>
-                        <TableCell className="text-center rounded-e-[20px] ">
-                          <span className='text-lg lg:text-xl font-light'>{link.staked} LAIKA LP</span>
+                        <TableCell className="text-center rounded-e-[20px]">
+                          <span className='text-lg lg:text-lg font-medium'>{link.staked} LAIKA LP</span>
                         </TableCell>
                       </TableRow>
                     </CollapsibleTrigger>

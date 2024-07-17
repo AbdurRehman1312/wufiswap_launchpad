@@ -22,10 +22,10 @@ const CollapseComponent = ({ coinName }) => {
   };
   return (
     <>
-      <TableRow className="bg-[#36373a] w-full ">
-        <TableCell colSpan={2} className="rounded-s-[20px] ">
-          <div className='text-base lg:text-xl flex flex-col items-start gap-4 lg:ps-10'>
-            <h1>Links</h1>
+      <TableRow className="w-full br_gradient">
+        <TableCell colSpan={2} className="rounded-s-[20px]">
+          <div className='text-base lg:text-xl flex flex-col items-start gap-5 lg:ps-10'>
+            <h1 className='text-base lg:text-2xl'>Links</h1>
             <a href="" className='flex items-center text-gray-400 gap-2 tracking-wider'>
               <span> {">"} Get LAIKA LP</span>
               <img src={images.window} alt="" className='w-4' />
@@ -42,26 +42,30 @@ const CollapseComponent = ({ coinName }) => {
         </TableCell>
         <TableCell colSpan={2} className="">
           <div className='px-7'>
-            <div className='flex justify-between'>
-              <div className='flex flex-col items-center'>
-                <h1 className='text-base lg:text-xl'>Your position</h1>
-                <span className='text-gray-400 text-sm lg:text-lg'>0 LAIKA LP</span>
-              </div>
-              <div className='flex flex-col items-center'>
-                <h1 className='text-base lg:text-xl'>LAIKA earned</h1>
-                <span className='text-gray-400 text-sm lg:text-lg'>0 LAIKA</span>
+            <div className=''>
+              <div className='flex flex-col'>
+                <h1 className='text-base lg:text-2xl'>Stake Your LAIKA</h1>
+                <div className='mt-3'>
+                  <h1 className='text-base lg:text-lg text-gray-400'>Enter amount (max : 0 LAIKA)</h1>
+                  <input type="number" className=" bg-[#5a5d60] text-base lg:text-xl appearance-none border-0 focus:outline-none w-[70%] py-2 px-5 mt-3 rounded-[10px]" placeholder='0' />
+                  <Button name={"Stake"} style={" py-3 px-20 mt-5"} onClick={renderPopup} />
+                </div>
               </div>
             </div>
-            <Button name={"Unstake"} style={" py-3 justify-center mx-auto px-10 mt-12"} onClick={renderPopup} />
           </div>
         </TableCell>
         <TableCell colSpan={5} className="rounded-e-[20px] ">
           <div className='py-10 px-7 flex flex-col items-start gap-4'>
-            <div>
-              <h1 className='text-base lg:text-xl'>Enter amount (max : 0 LAIKA LP)</h1>
-              <input type="number" className=" bg-[#5a5d60] text-base lg:text-xl appearance-none border-0 focus:outline-none w-[100%] py-2 px-5 mt-3 rounded-[10px]" placeholder='0' />
+            <h1 className='text-base lg:text-2xl'>Your Position</h1>
+            <div className='flex items-center justify-between w-full'>
+              <h1 className='text-base lg:text-lg text-gray-400'>Token Staked</h1>
+              <span className='text-lg lg:text-xl font-medium'>0 LAIKA</span>
             </div>
-            <Button name={"Connect Wallet"} style={" py-3 justify-center "} onClick={renderPopup} />
+            <div className='flex items-center justify-between w-full mt-2'>
+              <h1 className='text-base lg:text-lg text-gray-400'>Laika Earned</h1>
+              <span className='text-lg lg:text-xl font-medium'>0 LAIKA LP</span>
+            </div>
+            <Button name={"Unstake"} style={" py-3 px-20 mt-2"} onClick={renderPopup} />
           </div>
         </TableCell>
       </TableRow>

@@ -59,7 +59,7 @@ const FundedProjects = () => {
             <h1 className='text-2xl'>Funded Projects</h1>
             <Table>
                 <TableHeader>
-                    <TableRow className="bg-transparent">
+                    <TableRow className="bg-transparent ">
                         {
                             tableHead.map((head) => (
                                 <TableHead
@@ -74,7 +74,7 @@ const FundedProjects = () => {
                 <TableBody className="">
                     {
                         projects.map((project) => (
-                            <TableRow key={project.name} className=''>
+                            <TableRow key={project.name} className='br_gradient'>
                                 <TableCell className=" rounded-l-[20px]">
                                     <div className='flex items-center gap-3'>
                                         <img src={project.img} alt="" className='w-10' />

@@ -9,6 +9,9 @@ module.exports = {
   ],
   prefix: "",
   mode: "jit",
-  theme: {},
+  theme: {
+    extend: {
+    }
+  },
   plugins: [require("tailwindcss-animate")],
 };

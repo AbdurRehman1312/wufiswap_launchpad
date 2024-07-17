@@ -3,7 +3,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 const Table = React.forwardRef(({ className, ...props }, ref) => (
-  <div className="relative w-full overflow-auto">
+  <div className="relative w-full overflow-auto [&::-webkit-scrollbar]:hidden ">
     <table
       ref={ref}
       className={cn("w-full caption-bottom text-sm", className)}
@@ -35,12 +35,12 @@ TableFooter.displayName = "TableFooter"
 
 const TableRow = React.forwardRef(({ className, ...props }, ref) => (
   <tr
-      ref={ref}
-      className={cn(
-          "bg-[#36373A]",
-          className
-      )}
-      {...props} />
+    ref={ref}
+    className={cn(
+      "bg-[#36373A]",
+      className
+    )}
+    {...props} />
 ))
 TableRow.displayName = "TableRow"
 
@@ -49,7 +49,7 @@ const TableHead = React.forwardRef(({ className, ...props }, ref) => (
   <th
     ref={ref}
     className={cn(
-      "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+      "h-12 px-4 text-left align-middle font-semibold text-muted-foreground [&:has([role=checkbox])]:pr-0",
       className
     )}
     {...props} />

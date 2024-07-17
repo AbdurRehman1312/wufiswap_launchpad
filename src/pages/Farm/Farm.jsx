@@ -7,7 +7,9 @@ const Farm = () => {
 
   return (
     <>
-      <TabsComponent />
+      <section className='px-5 lg:px-[93px] my-5'>
+        <TabsComponent />
+      </section>
     </>
   )
 }
