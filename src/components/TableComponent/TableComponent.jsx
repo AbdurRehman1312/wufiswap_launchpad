@@ -42,9 +42,9 @@ const TableComponent = () => {
               <TableHead className="text-center text-base lg:text-lg">Pool</TableHead>
               <TableHead className="text-center text-base lg:text-lg">Earned</TableHead>
               <TableHead className="text-center text-base lg:text-lg">APR</TableHead>
-              <TableHead className="text-center text-base lg:text-lg">Total Stacked</TableHead>
+              <TableHead className="text-center text-base lg:text-lg">Total Staked</TableHead>
               <TableHead className="text-center text-base lg:text-lg">Available</TableHead>
-              <TableHead className="text-center text-base lg:text-lg">Stacked</TableHead>
+              <TableHead className="text-center text-base lg:text-lg">Staked</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
