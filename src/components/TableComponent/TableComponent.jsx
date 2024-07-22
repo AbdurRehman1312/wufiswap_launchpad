@@ -35,7 +35,7 @@ const TableComponent = () => {
 
   return (
     <div className="w-full">
-      <div className="rounded-md ">
+      <div className="rounded-md">
         <Table className="border-separate border-spacing-y-[2em]">
           <TableHeader>
             <TableRow className="bg-transparent">
@@ -52,7 +52,7 @@ const TableComponent = () => {
               links.map((link) => (
                 <Collapsible key={link.id} asChild>
                   <>
-                    <CollapsibleTrigger className='' asChild>
+                    <CollapsibleTrigger asChild>
                       <TableRow className="cursor-pointer br_gradient">
                         <TableCell className="font-medium text-base lg:text-lg rounded-s-[20px]">
                           <div className='flex items-center justify-center gap-3'>
@@ -79,8 +79,12 @@ const TableComponent = () => {
                         </TableCell>
                       </TableRow>
                     </CollapsibleTrigger>
-                    <CollapsibleContent className='w-full' asChild>
-                      <CollapseComponent coinName={link.swap_coin} />
+                    <CollapsibleContent asChild>
+                      <TableRow className="">
+                        <TableCell colSpan={6} className='p-0 rounded-[20px]'>
+                          <CollapseComponent/>
+                        </TableCell>
+                      </TableRow>
                     </CollapsibleContent>
                   </>
                 </Collapsible>
@@ -93,4 +97,4 @@ const TableComponent = () => {
   );
 }
 
-export default TableComponent
+export default TableComponent;
