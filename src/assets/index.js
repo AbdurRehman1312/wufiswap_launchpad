@@ -27,3 +27,5 @@ export { default as usdc } from "./usdc.png";
 export { default as window } from "./window.png";
 export { default as eye } from "./eye.png";
 export { default as laikacoins1 } from "./laikacoins1.png";
+export { default as wiwww } from "./wiwww.png";
+export { default as wufidoge2 } from "./wufidoge2.png";
