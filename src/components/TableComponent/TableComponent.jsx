@@ -68,7 +68,7 @@ const TableComponent = () => {
                   <>
                     <CollapsibleTrigger asChild>
                       <TableRow className="cursor-pointer">
-                        <TableCell className="font-medium text-base lg:text-lg rounded-s-[20px]">
+                        <TableCell className="font-medium text-base lg:text-lg rounded-s-[20px] px-0">
                           <div className='flex items-center justify-center gap-3'>
                             <div className='w-[50px] h-[50px]'>
                               <img src={link.image} alt="" className='w-full h-[100%] object-contain' />
