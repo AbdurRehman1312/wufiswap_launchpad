@@ -53,7 +53,7 @@ const TableComponent = () => {
                 <Collapsible key={link.id} asChild>
                   <>
                     <CollapsibleTrigger asChild>
-                      <TableRow className="cursor-pointer br_gradient">
+                      <TableRow className="cursor-pointer">
                         <TableCell className="font-medium text-base lg:text-lg rounded-s-[20px]">
                           <div className='flex items-center justify-center gap-3'>
                             <div className='w-[40px] h-[40px]'>

@@ -22,7 +22,7 @@ const CollapseComponent = ({ coinName }) => {
   };
   return (
     <>
-      <div className='w-full border_gradient p-2 rounded-[20px]'>
+      <div className='w-full p-2 rounded-[20px]'>
         <div className=' bg-[#36373A] rounded-[20px] flex justify-between py-10 px-12'>
           <div className='w-[30%]'>
             <div className='text-base lg:text-xl flex flex-col items-start gap-5 lg:ps-10'>

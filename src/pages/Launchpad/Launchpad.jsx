@@ -42,7 +42,7 @@ const Launchpad = () => {
               </TableRow>
             </TableHeader>
             <TableBody >
-              <TableRow className="br_gradient ">
+              <TableRow className="">
                 <TableCell className="font-medium rounded-s-[20px] "><div className="flex flex-col md:flex-row md:items-center items-start  lg:gap-6 gap-3">
                   <div className="border_gradient p-1 rounded-[13px] flex-shrink-0">
                     <img src={images.muttlogo} alt="" className="w-24 h-24 rounded-[10px]" />
