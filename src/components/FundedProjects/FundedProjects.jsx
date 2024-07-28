@@ -38,7 +38,7 @@ const projects = [
         participants: 680,
         rasied: '$220,000',
         price: 'NA',
-        img: images.wufidoge2,
+        img: images.laika,
         ath: "NA",
         launch: 'Apr 25th 2024',
     },
@@ -48,7 +48,7 @@ const projects = [
         participants: 320,
         rasied: '$130,000',
         price: '+100%',
-        img: images.wiwww,
+        img: images.www,
         ath: "+15,000%",
         launch: 'Feb 6th 2024',
     },
@@ -77,7 +77,7 @@ const FundedProjects = () => {
                             <TableRow key={project.name} className=''>
                                 <TableCell className=" rounded-l-[20px]">
                                     <div className='flex items-center gap-3'>
-                                        <div className='w-[60px] h-[60px]'>
+                                        <div className='w-[30px] h-[30px]'>
                                             <img src={project.img} alt="" className='w-full h-[100%] object-contain' />
                                         </div>
                                         <span>{project.name}</span>

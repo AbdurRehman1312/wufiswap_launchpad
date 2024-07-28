@@ -23,7 +23,21 @@ const TableComponent = () => {
       available: "0",
       staked: "0",
       viewCount: 100,
-      image: images.laikacoins1
+      image: images.wufidoge2
+    },
+    {
+      id: 2,
+      swap_coin: "DOGE-LAIKA LP",
+      percent: "0.01%",
+      earned: "0",
+      apr_orignal: "91.59%",
+      apr_cut: "80.34%",
+      staked_liquidity: "10275.38",
+      multiplier: "13.4x",
+      available: "0",
+      staked: "0",
+      viewCount: 100,
+      image: images.wiwww
     },
   ];
 
@@ -56,8 +70,8 @@ const TableComponent = () => {
                       <TableRow className="cursor-pointer">
                         <TableCell className="font-medium text-base lg:text-lg rounded-s-[20px]">
                           <div className='flex items-center justify-center gap-3'>
-                            <div className='w-[40px] h-[40px]'>
-                              <img src={link.image} alt="" className='w-full h-[100%] object-cover' />
+                            <div className='w-[50px] h-[50px]'>
+                              <img src={link.image} alt="" className='w-full h-[100%] object-contain' />
                             </div>
                             <span className='text-base lg:text-lg'>{link.swap_coin}</span>
                           </div>
@@ -82,7 +96,7 @@ const TableComponent = () => {
                     <CollapsibleContent asChild>
                       <TableRow className="">
                         <TableCell colSpan={6} className='p-0 rounded-[20px]'>
-                          <CollapseComponent/>
+                          <CollapseComponent />
                         </TableCell>
                       </TableRow>
                     </CollapsibleContent>
